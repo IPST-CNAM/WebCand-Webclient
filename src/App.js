@@ -12,14 +12,14 @@ class App extends Component {
     }
 
     callAPI() {
-        fetch("http://localhost:9000/testAPI")
+        fetch("http://172.23.0.3:9000/testAPI")
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
     }
 
     getUsers() {
-        fetch("http://localhost:9000/users")
+        fetch("http://172.23.0.3:9000/users")
             .then(res => res.json())
             .then(res => this.setState({ users: res }))
             .catch(err => err);

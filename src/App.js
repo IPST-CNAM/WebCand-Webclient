@@ -12,17 +12,18 @@ class App extends Component {
     }
 
     callAPI() {
-        fetch("http://backend:9000/testAPI")
+        fetch(`http://${process.env.REACT_APP_BACKEND_URL || 'localhost'}:9000/testAPI`)
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
     }
 
     getUsers() {
-        fetch("http://backend:9000/users")
+        fetch(`http://${process.env.REACT_APP_BACKEND_URL || 'localhost'}:9000/users'`)
             .then(res => res.json())
             .then(res => this.setState({ users: res }))
-            .catch(err => err);
+            .catch(err => console.log(err));
+        console.log(`${process.env.REACT_APP_BACKEND_URL}`);
     }
 
     componentDidMount() {
@@ -42,7 +43,7 @@ class App extends Component {
                 <button onClick={() => this.getUsers()}>Get users</button>
                 <ul>
                     {this.state.users.map(user => (
-                        <li key={user.id}>{user.username} mdp : {user.password}</li>
+                        <li key={user.id}>{user.first_name} mdp : {user.email}</li>
                     ))}
                 </ul>
             </div>

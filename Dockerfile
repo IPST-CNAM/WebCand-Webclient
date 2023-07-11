@@ -1,5 +1,5 @@
 # Utilisez une image de base Node.js avec un environnement de production
-FROM node:14-alpine as build-stage
+FROM node:14-alpine
 
 # Définit le répertoire de travail dans le conteneur
 WORKDIR /app

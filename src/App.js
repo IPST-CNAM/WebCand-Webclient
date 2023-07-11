@@ -19,7 +19,7 @@ class App extends Component {
     }
 
     getUsers() {
-        fetch(`http://${process.env.REACT_APP_BACKEND_URL || 'localhost'}:9000/users'`)
+        fetch(`http://${process.env.REACT_APP_BACKEND_URL || 'localhost'}:9000/users`)
             .then(res => res.json())
             .then(res => this.setState({ users: res }))
             .catch(err => console.log(err));
@@ -43,7 +43,7 @@ class App extends Component {
                 <button onClick={() => this.getUsers()}>Get users</button>
                 <ul>
                     {this.state.users.map(user => (
-                        <li key={user.id}>{user.first_name} mdp : {user.email}</li>
+                        <li key={user.id}>{user.first_name} e-mail : {user.email}</li>
                     ))}
                 </ul>
             </div>

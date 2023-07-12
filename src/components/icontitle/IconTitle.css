@@ -1,0 +1,18 @@
+.icon-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2%;
+}
+
+.icon {
+    max-height: fit-content;
+    margin-right: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c1002a;
+    font-family: Verdana, Arial, sans-serif;
+}

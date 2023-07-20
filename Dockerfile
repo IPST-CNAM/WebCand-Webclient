@@ -10,6 +10,7 @@ COPY ./package*.json ./
 COPY ./ ./
 
 # Installe les dépendances du projet
+RUN npm update -g
 RUN npm install
 
 EXPOSE 3000

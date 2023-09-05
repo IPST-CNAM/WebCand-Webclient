@@ -2,7 +2,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Connection from "./pages/connection/Connection";
-import Layout from './pages/layout/Layout'
+import Layout from './pages/layout/Layout';
+import Educator from './pages/educator/Educator';
 
 export default function App() {
   return (
@@ -12,6 +13,8 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="connection" element={<Connection />} />
+          <Route path="educator" element={<Educator />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

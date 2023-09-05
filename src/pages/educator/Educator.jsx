@@ -7,8 +7,9 @@ const Educator = () => {
         <div>
             {/* START acces for feature test */}
             <h1>page enseignant</h1>
+            <Link to="/fillEvaluationGrid">Remplir la fiche d'évaluation</Link>
             {/* <Link to="/faturePage">lien vers la page</Link> */}
-
+            
             {/* END acces for feature test */}
         </div>    
     );

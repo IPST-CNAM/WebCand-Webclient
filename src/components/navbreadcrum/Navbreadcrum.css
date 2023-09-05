@@ -1,7 +1,6 @@
 .cnam-container {
     border-top: none;
     border-bottom: 2px solid #F3F1EF;
-    width: 100%;
     margin: 15 auto;
 }
 
@@ -11,7 +10,6 @@ ul {
 
 li {
     display: inline;
-    margin-right: 1em;
     font-size: 1rem;
     color: #3f3f3f;
     font-weight: bold;

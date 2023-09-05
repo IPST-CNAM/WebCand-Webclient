@@ -11,6 +11,7 @@ const Header = () => {
             <img src="./main-logo.png" alt="Main Logo" className="logo" />
             <Link to="/home" className="button">Accueil</Link>
             <Link to="/formations" className="button">Formations</Link>
+            <Link to="/educator" className="button">Enseignant</Link>{/* #temp waiting for profiles */}
           </div>
           <Link to="/connection" className='button'>
               <img src="./user-icon.png" alt="User Icon" className="user-icon" />

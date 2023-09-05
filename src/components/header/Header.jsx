@@ -10,6 +10,7 @@ const Header = () => {
           <div className="buttons-container">
             <img src="./main-logo.png" alt="Main Logo" className="logo" />
             <Link to="/home" className="button">Accueil</Link>
+            <Link to="/educator" className="button">Enseignant</Link>
             <Link to="/formations" className="button">Formations</Link>
             <Link to="/educator" className="button">Enseignant</Link>{/* #temp waiting for profiles */}
           </div>

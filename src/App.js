@@ -4,7 +4,7 @@ import Home from "./pages/home/Home";
 import Connection from "./pages/connection/Connection";
 import Layout from './pages/layout/Layout';
 import Educator from './pages/educator/Educator';
-import FillEvaluationGrid from './pages/educator/fillEvaluationGrid/FillEvaluationGrid';
+import FillEvaluationGrid from './pages/educator/fillevaluationgrid/FillEvaluationGrid';
 
 export default function App() {
   return (
@@ -15,7 +15,7 @@ export default function App() {
           <Route path="home" element={<Home />} />
           <Route path="connection" element={<Connection />} />
           <Route path="educator" element={<Educator />} />
-          <Route path="fillEvaluationGrid" element={<FillEvaluationGrid />} />
+          <Route path="educator/fillEvaluationGrid" element={<FillEvaluationGrid />} />
 
         </Route>
       </Routes>

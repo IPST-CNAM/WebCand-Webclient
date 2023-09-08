@@ -37,4 +37,53 @@ function Table() {
 
 ReactDOM.render(<Table />, document.getElementById('form'));
 
+// get data from the form
+class EvaluationGridForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            datamap: [],
+        };
 
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+  
+    handleSubmit(event) {
+        event.preventDefault();
+        var preparedatamap = [];
+        preparedatamap.push(labels);
+        labels.map(index => {
+            var rownumber = index;
+            var rowcontent = document.getElementsByName(rownumber);
+            rowcontent.forEach(element => {
+                loclabel = document.getElementById('label-'.rownumber);
+                locnote = document.getElementById('note-'.rownumber);
+                loccomment = document.getElementById('comment-'.rownumber);
+            });
+            preparedatamap.push([loclabel, locnote, loccomment])
+        });
+        this.setState(
+            {datamap: preparedatamap}
+        );
+        
+        const res = (
+            this.state.datamap
+        );
+        alert("Le formulaire a été enregistré.");
+        localStorage.setItem('evaluationGridForm', JSON.stringify(res));
+    }
+  
+    render() {
+      return (
+        <form onSubmit={this.handleSubmit}>
+            <div id="form"></div>
+            <div>
+                <input className='btn' type="submit" value="Enregistrer" />
+                <input className='btn' type="reset" value="Annuler" />
+            </div>
+        </form>
+      );
+    }
+}
+
+export default EvaluationGridForm;

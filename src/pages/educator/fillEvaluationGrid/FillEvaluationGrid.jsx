@@ -1,5 +1,5 @@
 import React from "react";
-import EvaluationGridForm from "../../components/evaluationgridform/EvaluationGridForm";
+import EvaluationGridForm from "../../../components/evaluationgridform/EvaluationGridForm";
 
 const FillEvaluationGrid = () => {
 

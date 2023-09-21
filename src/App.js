@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Connection from "./pages/connection/Connection";
 import Layout from './pages/layout/Layout';
 import Educator from './pages/educator/Educator';
+import AssignedStudents from './pages/educator/assignedStudents/AssignedStudents'
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
           <Route path="home" element={<Home />} />
           <Route path="connection" element={<Connection />} />
           <Route path="educator" element={<Educator />} />
-
+          <Route path="assignedStudents" element={<AssignedStudents />} />
         </Route>
       </Routes>
     </BrowserRouter>

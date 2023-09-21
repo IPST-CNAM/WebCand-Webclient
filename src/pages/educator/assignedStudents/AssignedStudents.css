@@ -1,0 +1,7 @@
+.feature-title-container>h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    text-decoration: underline solid RGB(193, 0, 42, 0.8) 20%;
+}

@@ -1,0 +1,19 @@
+.asv-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    width: 80%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    table-layout: fixed;
+    padding: 20px;
+}

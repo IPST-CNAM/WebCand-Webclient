@@ -15,7 +15,7 @@ export default function App() {
           <Route path="home" element={<Home />} />
           <Route path="connection" element={<Connection />} />
           <Route path="educator" element={<Educator />} />
-          <Route path="cvviewer" element={<CvViewer />} />
+            <Route path="cvviewer" element={<CvViewer />} />
         </Route>
       </Routes>
     </BrowserRouter>

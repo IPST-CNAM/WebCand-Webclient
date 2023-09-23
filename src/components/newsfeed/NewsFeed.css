@@ -1,0 +1,16 @@
+.news-feed-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding: 4em;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 6em;
+  background-color: #F3F1EF;
+  border-radius: 10px;
+}
+
+.news-feed {
+ 
+}

@@ -1,0 +1,10 @@
+.two-column-layout {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ margin-left: 6em;
+ justify-content: flex-start;
+ gap: 30px;
+ max-width: 70em;
+ margin-bottom: 6em;
+}

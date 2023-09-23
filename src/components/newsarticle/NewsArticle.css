@@ -1,0 +1,30 @@
+/* NewsArticle.css */
+
+.news-article-wrapper {
+ width: 30%;
+ max-height: fit-content;
+ background-color: #F3F1EF;
+ border-radius: 10px;
+ overflow: hidden;
+}
+
+.news-article {
+ display: flex;
+ flex-direction: column;
+}
+
+.news-article__image img {
+ width: 100%;
+ min-height: 200px;
+ max-height: 200px;
+ /* Adjust the percentage for your desired image size */
+ object-fit: fill;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+}
+
+.news-article__content {
+ padding: 1rem;
+}
+
+/* Add any additional styles as needed */

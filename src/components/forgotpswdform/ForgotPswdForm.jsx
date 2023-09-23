@@ -1,42 +1,35 @@
-import "./LoginForm.css";
+import "./ForgotPswdForm.css";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const apiUrl = `http://localhost:9000`;
 
-class LoginForm extends Component {
+class ForgotPswdForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
-      password: "",
+      number: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.handleNumberChange = this.handleNumberChange.bind(this);
   }
 
   handleEmailChange(event) {
     this.setState({ email: event.target.value });
   }
 
-  handlePasswordChange(event) {
-    this.setState({ password: event.target.value });
+  handleNumberChange(event) {
+    this.setState({ number: event.target.value });
   }
 
   async handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const email = this.state.email;
-    const password = this.state.password;
-
-    const res = await axios.get(apiUrl + "/login", { email, password });
-    alert("Found user !" + res.data.user);
-
-    // store res in localstorage
-    localStorage.setItem("token", res.data.token);
-    localStorage.setItem("user", JSON.stringify(res.data.user));
+    const number = this.state.number;
   }
 
   render() {
@@ -57,29 +50,24 @@ class LoginForm extends Component {
               className="login_input"
             />
             <input
-              type="password"
-              id="password"
-              name="password"
+              type="number"
+              id="number"
+              name="number"
               value={this.state.password}
-              onChange={this.handlePasswordChange}
-              placeholder="Mot de passe*"
+              onChange={this.handleNumberChange}
+              placeholder="Numéro de téléphone*"
               required
               className="login_input"
             />
           </div>
-          <div className="text_links">
-            <Link to="/forgot_password" className="text-btn">
-              Mot de passe oublié
-            </Link>
-            <Link to="/create_account" className="text-btn">
-              Créer un compte
-            </Link>
-          </div>
-          <input className="btn" type="submit" value="Se connecter" />
+          <Link to="/home" className="text-btn">
+            Retourner à l'accueil
+          </Link>
+          <input className="btn" type="submit" value="Recevoir le lien" />
         </form>
       </div>
     );
   }
 }
 
-export default LoginForm;
+export default ForgotPswdForm;

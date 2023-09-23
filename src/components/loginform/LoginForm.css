@@ -61,3 +61,11 @@
     justify-content: center;
     width: 100%;
 }
+
+.text-btn {
+    color: #9b000e;
+    text-decoration: none;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+}

@@ -1,14 +1,18 @@
 import './CvViewer.css'
 import React, { Component } from 'react';
 import axios from 'axios';
+import LocationWrapper from './LocationWrapper';
 
 const apiUrl = `http://localhost:9000`;
-const testing = true
+// const testing = true
+
+
 class CvViewer extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
-            cv: process.env.PUBLIC_URL + 'cv_viewer.pdf',
+            cv: '',
             firstName: '',
             lastName: '',
             email: '',
@@ -20,32 +24,46 @@ class CvViewer extends Component {
     }
 
     componentDidMount() {
-        let candidateId = 0
-        if(testing){
-            candidateId = 5;
-        }else{
-            candidateId = this.props.match.params.candidateId;
-        }
+        const queryParams = new URLSearchParams(this.props.location.search);
+        const id = queryParams.get('id');
+        // console.log("id",id);
+        let candidateId = id;
+        // console.log("candidatid",candidateId);
+        // let candidateId = 0
+        // if(testing){
+        //     candidateId = 5;
+        // }else{
+        //     candidateId = this.props.match.params.candidateId;
+        // }
         this.fetchCandidateData(candidateId);
     }
 
     async fetchCandidateData(candidateId) {
+        let found = false;
         try {
+                // console.log("candidateIdfetch",candidateId);
                 const res = await axios.get(apiUrl+'/registeredUsers');
-
+                // console.log("res",res);
                 for (let candidate of res.data) {
-                    if(candidate.id_registered_user === candidateId){
-                        console.log("same")
+                    // console.log("candidate",candidate);
+                    // console.log("id_registered_user",candidate.id_registered_user);
+                    if(candidate.id_registered_user == candidateId){
+                        // console.log("same")
                         this.setState({ 
                             // cv: res.data.cv,
                             firstName: candidate.first_name,
                             lastName: candidate.last_name,
                             email: candidate.email,
-                            phoneNumber: candidate.phone_number
+                            phoneNumber: candidate.phone_number,
+                            cv: process.env.PUBLIC_URL + 'cv_viewer.pdf'
                         });
+                        found = true;
                     }   
                 }                
             // }
+                if(!found){
+                    alert('Candidate Not Found');
+                }
             
         } catch(error) {
             alert('Erreur lors de la récupération des données du candidat: ' + error.message);
@@ -73,4 +91,4 @@ class CvViewer extends Component {
     }
 }
 
-export default CvViewer;
+export default LocationWrapper(CvViewer);

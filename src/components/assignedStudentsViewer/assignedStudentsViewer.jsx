@@ -2,9 +2,26 @@ import './assignedStudentsViewer.css'
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const apiUrl = `http://localhost:8080`;
+const apiUrl = `http://localhost:9000`;
 
 class AssignedStudentsViewer extends Component {
+    constructor(props) {
+        super(props)
+        console.log('Constructor')
+        this.state = {
+            assignedStudents: [],
+            test: "red"
+        }
+        this.setState(this.getAssignedStudents)
+    }
+
+    async getAssignedStudents() {
+        console.log('test')
+        const res = await axios.get(apiUrl + '/candidates')
+        console.log('test res', res.data)
+        return res.data
+    }
+
     render () {
         return (
             <div>
@@ -16,34 +33,34 @@ class AssignedStudentsViewer extends Component {
                             <th>Email</th>
                         </tr>
                         <tr>
-                            <td>Alfreds Futterkiste</td>
-                            <td>Maria Anders</td>
-                            <td>Germany</td>
+                            <td>Doe</td>
+                            <td>John</td>
+                            <td>john@example.com</td>
                         </tr>
                         <tr>
-                            <td>Centro comercial Moctezuma</td>
-                            <td>Francisco Chang</td>
-                            <td>Mexico</td>
+                            <td>Smith</td>
+                            <td>Jane</td>
+                            <td>jane@example.com</td>
                         </tr>
                         <tr>
-                            <td>Ernst Handel</td>
-                            <td>Roland Mendel</td>
-                            <td>Austria</td>
+                            <td>Johnson</td>
+                            <td>Alice</td>
+                            <td>alice@example.com</td>
                         </tr>
                         <tr>
-                            <td>Island Trading</td>
-                            <td>Helen Bennett</td>
-                            <td>UK</td>
+                            <td>Williams</td>
+                            <td>Bob</td>
+                            <td>bob@example.com</td>
                         </tr>
                         <tr>
-                            <td>Laughing </td>
-                            <td>Yoshi Tannamuri</td>
-                            <td>Canada</td>
+                            <td>Jones</td>
+                            <td>William</td>
+                            <td>william@example.com</td>
                         </tr>
                         <tr>
-                            <td>Magazzini Alimentari Riuniti</td>
-                            <td>Giovanni Rovelli</td>
-                            <td>Italy</td>
+                            <td>Davis</td>
+                            <td>Michael</td>
+                            <td>michael@example.com</td>
                         </tr>
                     </table>
                 </div>

@@ -8,12 +8,20 @@
 table {
     width: 80%;
     font-family: arial, sans-serif;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-radius: 5px;
+    /* border: 1px solid black; */
     table-layout: fixed;
+    box-shadow: 9px 11px 13px 0px #888888;
 }
   
 td, th {
-    border: 1px solid #dddddd;
+    border: 2px solid #dddddd;
     table-layout: fixed;
     padding: 20px;
+}
+
+th {
+    background-color: rgb(38, 36, 36);
+    color: white;
 }

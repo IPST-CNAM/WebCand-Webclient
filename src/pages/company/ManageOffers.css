@@ -1,0 +1,76 @@
+.wrap {
+    margin: 20px auto; /* Centre le container et ajoute de la marge */
+    padding: 0 20px; /* Ajoute de la marge interne gauche et droite */
+    max-width: 100%; /* Le conteneur occupe toute la largeur */
+    box-sizing: border-box; /* Inclut le rembourrage et la bordure dans la largeur */
+  }
+  
+  
+  .table {
+    width: auto;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px !important; /* Coins arrondis du tableau */
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .table th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  
+  }
+  
+  .table th:first-child {
+    border-top-left-radius: 5px; /* Coin supérieur gauche arrondi pour la première cellule du header */
+  }
+  
+  .table th:last-child {
+    border-top-right-radius: 5px; /* Coin supérieur droit arrondi pour la dernière cellule du header */
+  }
+  .table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .table th, .table td {
+    border-right: 1px solid #ccc; /* Lignes verticales entre les cellules */
+  }
+  
+  .table tbody tr:last-child th, .table tbody tr:last-child td {
+    border-bottom: none; /* Pas de ligne en bas pour la dernière rangée */
+  }
+  
+  .success-message {
+    background-color: #d4edda; /* Couleur de fond verte */
+    color: #155724; /* Couleur du texte */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+  }
+
+  .edit-button {
+    margin-right: 10px; /* Ajustez la marge selon vos besoins */
+  }
+  
+  .delete-button {
+    margin-left: 10px; /* Ajustez la marge selon vos besoins */
+  }
+
+  .search-input {
+    padding: 10px;
+    width: 200px !important;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  

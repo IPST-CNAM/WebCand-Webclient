@@ -1,0 +1,37 @@
+/* Update the styles for the WatchVideoInterview component */
+
+.App {
+  text-align: center;
+}
+
+.video-and-text-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.text-container {
+  width: 20%;
+  padding: 20px;
+}
+
+.text-item {
+  margin-bottom: 10px;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+.video-container .react-player {
+  margin-right: 10px;
+}
+
+.bottom-left-text {
+  position: absolute;
+  left: 10px;
+}
+

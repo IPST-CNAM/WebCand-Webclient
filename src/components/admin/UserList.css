@@ -1,0 +1,33 @@
+/* user-list.css */
+
+/* Style général du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style de l'en-tête de tableau */
+  th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Style des lignes impaires du tableau */
+  tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Style des lignes paires du tableau */
+  tr:nth-child(even) {
+    background-color: #fff;
+  }
+  
+  /* Style des cellules du tableau */
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
